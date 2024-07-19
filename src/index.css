@@ -1,13 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* common styles */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(19, 18, 18);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  display: block;
+}
+
+.wrapper {
+  @apply xl:w-4/5 lg:max-w-6xl lg:mx-auto
+}
+
+.flex-wrapper {
+  @apply flex flex-col items-center lg:flex-row lg:flex-wrap mx-3
+}
+
+/* Header Component styles */
+
+header {
+  background-color: #131313;
+  padding: 10px 25px;
+  border-bottom: 1px solid #7a7a7a;
+}
+
+.header-container {
+  @apply flex items-center justify-between px-6
+  /* border border-green-500 min-h-16*/
+}
+
+.header-lists {
+  @apply items-center hidden gap-10 lg:flex text-primary-text font-semibold
+}
+
+.primary_header_button {
+  @apply py-2 bg-transparent border-2 text-primary border-primary px-7 rounded-xl
+}
+
+.secondary_header_button {
+  @apply px-6 py-2 font-semibold rounded-xl bg-primary text-primary-text
+}
+
+.hamburger_menu {
+  @apply text-xl lg:hidden
+}
+
+/* Banner Component Styles */
+
+.banner {
+  @apply flex flex-col items-center justify-center w-full h-auto py-12
+  /* border border-white */
+}
+
+.banner-left {
+  @apply flex flex-col items-start justify-center gap-5 px-3
+  /* border-red-500 */
+  xl:px-0
+  /* border */
+  lg:w-6/12
+}
+
+.banner-heading {
+  @apply text-2xl lg:text-5xl md:text-4xl text-primary-text
+}
+
+.banner-content {
+  @apply lg:w-4/5 text-lg text-gray-500 lg:font-normal
+}
+
+.primary-btn {
+  @apply px-4 py-2 lg:px-6 rounded-xl bg-primary
+}
+
+.banner-right {
+  @apply h-full
+  /* border border-red-600 */
+  lg:w-6/12
+}
+
+.banner-img {
+  @apply h-auto max-w-full align-middle
+}
+
+/* slider styles */
+
+.slider {
+  @apply py-12
+  /*border border-red-500 */
+  bg-grey
+}
+
+/* Taikonz component styles */
+
+.card-content {
+  background-image: url("./assets/taikonzBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.card-content2 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 100%;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+.card-content::before {
+  content: "";
+  background-color: #9685ff;
+  border-radius: 90px;
+  height: 36px;
+  left: 50%;
+  position: absolute !important;
+  position: relative;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  z-index: -1;
+}
+
+.investing {
+  border: 1px solid white;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-image: linear-gradient(90deg, #29272b, #181818 98.5%) 1;
+  border-radius: 10px;
+  display: flex;
+  margin: top 30px;
+}
+
+.investing-body {
+  fill: #ededed33;
+  stroke-width: 2px;
+  stroke: #fff;
+  margin-left: 15px;
+  padding: 12px;
+}
+
+.investing::before {
+  background-image: url("./assets/blur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 100%;
+  left: 2px;
+  object-fit: cover;
+  opacity: .5;
+  position: absolute;
+  top: -3px;
+  width: 100%;
+  z-index: 1;
+}
+
+.investing-num {
+  align-items: center;
+  color: #9685ff;
+  display: flex;
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 800;
+  justify-content: center;
+  margin-left: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.crypto-section {
+  background: #181818;
+  background-image: url("./assets/laptop.png");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 51%;
 }

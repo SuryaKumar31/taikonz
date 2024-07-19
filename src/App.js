@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./components/Banner";
+import CryptoExchange from "./components/CryptoExchange";
+import Currencies from "./components/Currencies";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Investing from "./components/Investing";
+import Slider from "./components/Slider";
+import Taikonz from "./components/Taikonz";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Banner />
+      <Slider />
+      <Taikonz />
+      <Currencies />
+      <Investing />
+      <CryptoExchange />
+      <Footer />
+    </main>
   );
 }
 
-export default App;
+export default App
